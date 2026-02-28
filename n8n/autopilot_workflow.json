@@ -1,0 +1,135 @@
+{
+  "name": "Autopilot Social — Main Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "hours", "hoursInterval": 6 }]
+        }
+      },
+      "name": "⏰ Schedule Trigger (Every 6h)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300],
+      "id": "node-schedule"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/api/pipeline/run",
+        "method": "POST",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [{ "name": "trigger", "value": "scheduled" }]
+        }
+      },
+      "name": "🚀 Trigger Pipeline",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [460, 300],
+      "id": "node-trigger"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/api/contacts/summary",
+        "method": "GET"
+      },
+      "name": "📊 Fetch Summary",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [680, 300],
+      "id": "node-summary"
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8000/api/actions/?status=pending&urgency=CRITICAL",
+        "method": "GET"
+      },
+      "name": "⚠️ Fetch Critical Actions",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [680, 460],
+      "id": "node-actions"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [{
+            "value1": "={{ $json.total }}",
+            "operation": "larger",
+            "value2": 0
+          }]
+        }
+      },
+      "name": "🔍 Has Critical Actions?",
+      "type": "n8n-nodes-base.if",
+      "position": [900, 460],
+      "id": "node-check"
+    },
+    {
+      "parameters": {
+        "fromEmail": "autopilot@yourdomain.com",
+        "toEmail": "you@yourdomain.com",
+        "subject": "⚠️ Autopilot: {{ $json.total }} relationship(s) need attention",
+        "emailType": "html",
+        "message": "=<html><body style='font-family: monospace; background: #F5F0E8; padding: 24px;'><div style='background: #111; color: #AFFFB0; padding: 16px; border: 3px solid #111;'><h1 style='margin:0; font-size: 28px; letter-spacing: 3px;'>AUTOPILOT SOCIAL</h1><p style='color: #F5FF4E; margin: 4px 0 0;'>RELATIONSHIP DIGEST</p></div><div style='background: white; border: 3px solid #111; margin-top: 16px; padding: 20px;'><h2>⚠️ {{ $json.total }} Action(s) Pending</h2>{{#each $json.actions}}<div style='border: 2px solid #111; padding: 12px; margin-bottom: 12px; box-shadow: 4px 4px 0 #111;'><div style='font-weight: bold; font-size: 16px;'>{{ this.contact }}</div><div style='background: #F5FF4E; display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: bold; border: 1px solid #111; margin: 6px 0;'>{{ this.urgency }} · {{ this.type }}</div><div style='border-left: 3px solid #111; padding-left: 10px; margin-top: 8px; font-style: italic;'>\"{{ this.message }}\"</div><div style='font-size: 12px; opacity: 0.6; margin-top: 6px;'>{{ this.reason }}</div></div>{{/each}}</div><div style='margin-top: 16px; font-size: 11px; opacity: 0.5;'>Sent by Autopilot Social Pipeline</div></body></html>"
+      },
+      "name": "📧 Send Email Digest",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [1120, 400],
+      "id": "node-email"
+    },
+    {
+      "parameters": {
+        "path": "autopilot",
+        "httpMethod": "POST",
+        "responseMode": "lastNode"
+      },
+      "name": "🔔 Webhook: Pipeline Complete",
+      "type": "n8n-nodes-base.webhook",
+      "position": [240, 560],
+      "id": "node-webhook-complete"
+    },
+    {
+      "parameters": {
+        "path": "reminders",
+        "httpMethod": "POST",
+        "responseMode": "lastNode"
+      },
+      "name": "🔔 Webhook: New Actions",
+      "type": "n8n-nodes-base.webhook",
+      "position": [240, 720],
+      "id": "node-webhook-actions"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse incoming webhook payload and format for email\nconst data = $input.item.json.data;\nconst actions = data.actions || [];\n\nreturn [{\n  json: {\n    total: actions.length,\n    critical_count: data.critical_count || 0,\n    actions: actions.map(a => ({\n      contact: a.contact,\n      type: a.type,\n      urgency: a.urgency,\n      message: a.message,\n      reason: a.reason,\n    }))\n  }\n}];"
+      },
+      "name": "⚙️ Format Actions Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [460, 720],
+      "id": "node-format"
+    }
+  ],
+  "connections": {
+    "⏰ Schedule Trigger (Every 6h)": {
+      "main": [[{ "node": "🚀 Trigger Pipeline", "type": "main", "index": 0 }]]
+    },
+    "🚀 Trigger Pipeline": {
+      "main": [
+        [{ "node": "📊 Fetch Summary", "type": "main", "index": 0 }],
+        [{ "node": "⚠️ Fetch Critical Actions", "type": "main", "index": 0 }]
+      ]
+    },
+    "⚠️ Fetch Critical Actions": {
+      "main": [[{ "node": "🔍 Has Critical Actions?", "type": "main", "index": 0 }]]
+    },
+    "🔍 Has Critical Actions?": {
+      "main": [
+        [{ "node": "📧 Send Email Digest", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "🔔 Webhook: New Actions": {
+      "main": [[{ "node": "⚙️ Format Actions Payload", "type": "main", "index": 0 }]]
+    },
+    "⚙️ Format Actions Payload": {
+      "main": [[{ "node": "📧 Send Email Digest", "type": "main", "index": 0 }]]
+    }
+  }
+}

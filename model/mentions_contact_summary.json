@@ -1,0 +1,522 @@
+[
+  {
+    "contact_id": "8b287567-2202-4e5d-9eeb-ae2d1781b931",
+    "total_msgs": 155,
+    "missed_count": 33,
+    "max_prob": 0.9994478821754456,
+    "mean_prob": 0.31041908264160156,
+    "missed_rate": 0.2129032258064516
+  },
+  {
+    "contact_id": "f06d335b-18a9-42e6-a8da-6a5fed90d34c",
+    "total_msgs": 187,
+    "missed_count": 31,
+    "max_prob": 0.9995012283325195,
+    "mean_prob": 0.24039675295352936,
+    "missed_rate": 0.1657754010695187
+  },
+  {
+    "contact_id": "5e440e9c-b1ac-4514-9c3a-5f3c1a07bbcb",
+    "total_msgs": 162,
+    "missed_count": 29,
+    "max_prob": 0.9994137287139893,
+    "mean_prob": 0.23879505693912506,
+    "missed_rate": 0.17901234567901234
+  },
+  {
+    "contact_id": "554e450b-739a-4e37-9499-748f24d7dd4d",
+    "total_msgs": 185,
+    "missed_count": 28,
+    "max_prob": 0.9992824196815491,
+    "mean_prob": 0.20119458436965942,
+    "missed_rate": 0.15135135135135136
+  },
+  {
+    "contact_id": "2bfe9aef-fe7d-4c05-ba65-85fb922e7e2e",
+    "total_msgs": 171,
+    "missed_count": 27,
+    "max_prob": 0.9972911477088928,
+    "mean_prob": 0.23044365644454956,
+    "missed_rate": 0.15789473684210525
+  },
+  {
+    "contact_id": "742e1e30-fe61-4e39-88e3-4ad51b8afe6f",
+    "total_msgs": 158,
+    "missed_count": 27,
+    "max_prob": 0.9995449185371399,
+    "mean_prob": 0.23734407126903534,
+    "missed_rate": 0.17088607594936708
+  },
+  {
+    "contact_id": "96b77b31-b43a-4666-8231-a5cddac19e96",
+    "total_msgs": 180,
+    "missed_count": 25,
+    "max_prob": 0.9994383454322815,
+    "mean_prob": 0.19502609968185425,
+    "missed_rate": 0.1388888888888889
+  },
+  {
+    "contact_id": "835b3b38-c5fc-4167-bf67-18bfa384a067",
+    "total_msgs": 154,
+    "missed_count": 23,
+    "max_prob": 0.9995251893997192,
+    "mean_prob": 0.2137952744960785,
+    "missed_rate": 0.14935064935064934
+  },
+  {
+    "contact_id": "314feea9-ca49-40e9-9a96-18a2671b0793",
+    "total_msgs": 155,
+    "missed_count": 23,
+    "max_prob": 0.999278724193573,
+    "mean_prob": 0.22063329815864563,
+    "missed_rate": 0.14838709677419354
+  },
+  {
+    "contact_id": "acd3bf3a-d50c-4c8b-9e5a-1ee68687a1f8",
+    "total_msgs": 171,
+    "missed_count": 22,
+    "max_prob": 0.9994495511054993,
+    "mean_prob": 0.19387418031692505,
+    "missed_rate": 0.1286549707602339
+  },
+  {
+    "contact_id": "ebdecd2b-bacc-4808-8759-74ba4a6edd5c",
+    "total_msgs": 141,
+    "missed_count": 22,
+    "max_prob": 0.9995728135108948,
+    "mean_prob": 0.22668945789337158,
+    "missed_rate": 0.15602836879432624
+  },
+  {
+    "contact_id": "b5f7ada8-3951-4628-a81c-37ff3a08ca6c",
+    "total_msgs": 187,
+    "missed_count": 21,
+    "max_prob": 0.9993466734886169,
+    "mean_prob": 0.18694886565208435,
+    "missed_rate": 0.11229946524064172
+  },
+  {
+    "contact_id": "a04c12c9-201f-4dbe-a3e3-892c7c4427e6",
+    "total_msgs": 171,
+    "missed_count": 20,
+    "max_prob": 0.9970611929893494,
+    "mean_prob": 0.1870175004005432,
+    "missed_rate": 0.11695906432748537
+  },
+  {
+    "contact_id": "ddb7afc3-e33a-4564-a1cc-9b24409e7768",
+    "total_msgs": 157,
+    "missed_count": 20,
+    "max_prob": 0.999471127986908,
+    "mean_prob": 0.2159510850906372,
+    "missed_rate": 0.12738853503184713
+  },
+  {
+    "contact_id": "8091bdfb-5610-419e-8c09-077dd83bbefd",
+    "total_msgs": 142,
+    "missed_count": 20,
+    "max_prob": 0.9989956021308899,
+    "mean_prob": 0.24646788835525513,
+    "missed_rate": 0.14084507042253522
+  },
+  {
+    "contact_id": "ebe13cca-cc25-4e8f-a590-e5001aff9716",
+    "total_msgs": 146,
+    "missed_count": 20,
+    "max_prob": 0.9975948929786682,
+    "mean_prob": 0.19808107614517212,
+    "missed_rate": 0.136986301369863
+  },
+  {
+    "contact_id": "7d9829ce-51c7-42c2-8f50-75baf07bbcf5",
+    "total_msgs": 152,
+    "missed_count": 19,
+    "max_prob": 0.9995542168617249,
+    "mean_prob": 0.23253023624420166,
+    "missed_rate": 0.125
+  },
+  {
+    "contact_id": "6e8282d7-828f-4c88-8c2b-8a3f47ae5cc3",
+    "total_msgs": 142,
+    "missed_count": 19,
+    "max_prob": 0.9976040720939636,
+    "mean_prob": 0.2094559371471405,
+    "missed_rate": 0.13380281690140844
+  },
+  {
+    "contact_id": "4e4c3a89-82f4-46d4-ba83-245d3756e207",
+    "total_msgs": 175,
+    "missed_count": 19,
+    "max_prob": 0.9993921518325806,
+    "mean_prob": 0.18889515101909637,
+    "missed_rate": 0.10857142857142857
+  },
+  {
+    "contact_id": "83a392d8-d52d-408e-8254-885866f69640",
+    "total_msgs": 155,
+    "missed_count": 18,
+    "max_prob": 0.9988742470741272,
+    "mean_prob": 0.18740545213222504,
+    "missed_rate": 0.11612903225806452
+  },
+  {
+    "contact_id": "f9db351a-70fc-464c-a608-d952d4450974",
+    "total_msgs": 153,
+    "missed_count": 18,
+    "max_prob": 0.9991788268089294,
+    "mean_prob": 0.19103829562664032,
+    "missed_rate": 0.11764705882352941
+  },
+  {
+    "contact_id": "ba06634e-a6a7-4a0c-b823-6d3d1ba1aced",
+    "total_msgs": 141,
+    "missed_count": 18,
+    "max_prob": 0.9970881342887878,
+    "mean_prob": 0.19892346858978271,
+    "missed_rate": 0.1276595744680851
+  },
+  {
+    "contact_id": "d8bc8f1c-64ef-46da-8fad-0c0d6f85f716",
+    "total_msgs": 147,
+    "missed_count": 18,
+    "max_prob": 0.999370276927948,
+    "mean_prob": 0.2126215100288391,
+    "missed_rate": 0.12244897959183673
+  },
+  {
+    "contact_id": "41beb30a-e14f-4664-abf0-ac6053cd12c3",
+    "total_msgs": 150,
+    "missed_count": 17,
+    "max_prob": 0.9979689717292786,
+    "mean_prob": 0.21717870235443115,
+    "missed_rate": 0.11333333333333333
+  },
+  {
+    "contact_id": "b4185ead-2676-477c-8bfd-0d866a5f0396",
+    "total_msgs": 139,
+    "missed_count": 17,
+    "max_prob": 0.9993171691894531,
+    "mean_prob": 0.2119247317314148,
+    "missed_rate": 0.1223021582733813
+  },
+  {
+    "contact_id": "d82bc0c8-adfc-4e8a-9aaf-4fa87e7d8d5c",
+    "total_msgs": 164,
+    "missed_count": 17,
+    "max_prob": 0.9978539347648621,
+    "mean_prob": 0.19038519263267517,
+    "missed_rate": 0.10365853658536585
+  },
+  {
+    "contact_id": "8116dac1-4282-41c5-bb1a-d45c0be29115",
+    "total_msgs": 178,
+    "missed_count": 16,
+    "max_prob": 0.9965368509292603,
+    "mean_prob": 0.1563287377357483,
+    "missed_rate": 0.0898876404494382
+  },
+  {
+    "contact_id": "41356578-7f87-45c6-8556-6867fb1ee8b0",
+    "total_msgs": 151,
+    "missed_count": 16,
+    "max_prob": 0.9993525147438049,
+    "mean_prob": 0.19480428099632263,
+    "missed_rate": 0.10596026490066225
+  },
+  {
+    "contact_id": "1833eaf2-c4d6-495b-8762-5acf251ba82a",
+    "total_msgs": 167,
+    "missed_count": 16,
+    "max_prob": 0.9960373640060425,
+    "mean_prob": 0.1622469127178192,
+    "missed_rate": 0.09580838323353294
+  },
+  {
+    "contact_id": "106e5a02-ba2f-4e17-9956-8deef3c0190a",
+    "total_msgs": 114,
+    "missed_count": 16,
+    "max_prob": 0.9969953298568726,
+    "mean_prob": 0.2061663568019867,
+    "missed_rate": 0.14035087719298245
+  },
+  {
+    "contact_id": "aca67d4a-7881-4958-85c4-f2bc4b4f6fcb",
+    "total_msgs": 170,
+    "missed_count": 15,
+    "max_prob": 0.9995545744895935,
+    "mean_prob": 0.17768366634845734,
+    "missed_rate": 0.08823529411764706
+  },
+  {
+    "contact_id": "3e3fb487-acbc-4092-8000-6018144f62b4",
+    "total_msgs": 158,
+    "missed_count": 15,
+    "max_prob": 0.9983398914337158,
+    "mean_prob": 0.17103295028209686,
+    "missed_rate": 0.0949367088607595
+  },
+  {
+    "contact_id": "72fb2ed7-4a87-4fdd-a212-4165bd6af1cd",
+    "total_msgs": 154,
+    "missed_count": 15,
+    "max_prob": 0.9971215128898621,
+    "mean_prob": 0.16334469616413116,
+    "missed_rate": 0.09740259740259741
+  },
+  {
+    "contact_id": "f488f601-fe0a-4036-91d9-169b7a3eed91",
+    "total_msgs": 149,
+    "missed_count": 15,
+    "max_prob": 0.9973915815353394,
+    "mean_prob": 0.1690777838230133,
+    "missed_rate": 0.10067114093959731
+  },
+  {
+    "contact_id": "0277f864-ba56-414c-a08a-4ea5171d5eb0",
+    "total_msgs": 167,
+    "missed_count": 14,
+    "max_prob": 0.9990448355674744,
+    "mean_prob": 0.15272784233093262,
+    "missed_rate": 0.08383233532934131
+  },
+  {
+    "contact_id": "10638812-831a-40ce-87b1-e057ea81b2cb",
+    "total_msgs": 144,
+    "missed_count": 14,
+    "max_prob": 0.9994779229164124,
+    "mean_prob": 0.17298200726509094,
+    "missed_rate": 0.09722222222222222
+  },
+  {
+    "contact_id": "45b5512b-0995-42a1-8769-7041371627b1",
+    "total_msgs": 168,
+    "missed_count": 14,
+    "max_prob": 0.9979446530342102,
+    "mean_prob": 0.1724078208208084,
+    "missed_rate": 0.08333333333333333
+  },
+  {
+    "contact_id": "fd8fdd78-c6f0-4793-8e0f-4eb6717df40c",
+    "total_msgs": 144,
+    "missed_count": 14,
+    "max_prob": 0.9981023669242859,
+    "mean_prob": 0.17466950416564941,
+    "missed_rate": 0.09722222222222222
+  },
+  {
+    "contact_id": "9ea24076-5f4b-4a0d-b648-796ca854ac73",
+    "total_msgs": 172,
+    "missed_count": 14,
+    "max_prob": 0.997316300868988,
+    "mean_prob": 0.17130552232265472,
+    "missed_rate": 0.08139534883720931
+  },
+  {
+    "contact_id": "7899b031-b2c4-4ba4-9d3e-42c41cc37f66",
+    "total_msgs": 99,
+    "missed_count": 14,
+    "max_prob": 0.9977253079414368,
+    "mean_prob": 0.18400216102600098,
+    "missed_rate": 0.1414141414141414
+  },
+  {
+    "contact_id": "8e3284bd-0ce4-4013-802a-011598231a71",
+    "total_msgs": 167,
+    "missed_count": 13,
+    "max_prob": 0.9960089921951294,
+    "mean_prob": 0.17491748929023743,
+    "missed_rate": 0.07784431137724551
+  },
+  {
+    "contact_id": "ad1b3087-9d40-4b99-b3ab-55d9fb180137",
+    "total_msgs": 132,
+    "missed_count": 13,
+    "max_prob": 0.9971104860305786,
+    "mean_prob": 0.15157830715179443,
+    "missed_rate": 0.09848484848484848
+  },
+  {
+    "contact_id": "ed1fa1c5-da21-4f74-af14-d41484eb7e51",
+    "total_msgs": 151,
+    "missed_count": 13,
+    "max_prob": 0.999295711517334,
+    "mean_prob": 0.1373601257801056,
+    "missed_rate": 0.08609271523178808
+  },
+  {
+    "contact_id": "2be00cb2-3e20-44a1-9dd9-6573a48c9fa2",
+    "total_msgs": 180,
+    "missed_count": 13,
+    "max_prob": 0.996316134929657,
+    "mean_prob": 0.1680569052696228,
+    "missed_rate": 0.07222222222222222
+  },
+  {
+    "contact_id": "9e18d6fd-9aec-4ec2-a25a-a57228e66bfb",
+    "total_msgs": 146,
+    "missed_count": 13,
+    "max_prob": 0.9993473887443542,
+    "mean_prob": 0.17065195739269257,
+    "missed_rate": 0.08904109589041095
+  },
+  {
+    "contact_id": "543cf1d0-d211-4888-b6eb-113a6f422e5f",
+    "total_msgs": 168,
+    "missed_count": 12,
+    "max_prob": 0.9963196516036987,
+    "mean_prob": 0.1578904390335083,
+    "missed_rate": 0.07142857142857142
+  },
+  {
+    "contact_id": "67fa66d3-f76d-4c8f-82f6-13d5f4e397fb",
+    "total_msgs": 148,
+    "missed_count": 12,
+    "max_prob": 0.9967530369758606,
+    "mean_prob": 0.16155661642551422,
+    "missed_rate": 0.08108108108108109
+  },
+  {
+    "contact_id": "1450434f-b3fb-4b1f-a25e-c97f53361b79",
+    "total_msgs": 154,
+    "missed_count": 12,
+    "max_prob": 0.9960528612136841,
+    "mean_prob": 0.16039015352725983,
+    "missed_rate": 0.07792207792207792
+  },
+  {
+    "contact_id": "624b6bf3-4787-409e-8a02-57ca8be38dcc",
+    "total_msgs": 171,
+    "missed_count": 12,
+    "max_prob": 0.9990147352218628,
+    "mean_prob": 0.17738738656044006,
+    "missed_rate": 0.07017543859649122
+  },
+  {
+    "contact_id": "c38517cb-aec1-47d7-88cc-5c2138e599a0",
+    "total_msgs": 158,
+    "missed_count": 12,
+    "max_prob": 0.9965144991874695,
+    "mean_prob": 0.15924879908561707,
+    "missed_rate": 0.0759493670886076
+  },
+  {
+    "contact_id": "42651c9f-1d88-4070-87f0-a9c0d9b905ae",
+    "total_msgs": 143,
+    "missed_count": 11,
+    "max_prob": 0.9993005990982056,
+    "mean_prob": 0.15005634725093842,
+    "missed_rate": 0.07692307692307693
+  },
+  {
+    "contact_id": "bdbc9c78-038c-4d02-810d-04d53cd844cc",
+    "total_msgs": 166,
+    "missed_count": 11,
+    "max_prob": 0.9995237588882446,
+    "mean_prob": 0.16911932826042175,
+    "missed_rate": 0.06626506024096386
+  },
+  {
+    "contact_id": "4c52901f-2fb8-4a16-86be-e5dd808762f3",
+    "total_msgs": 142,
+    "missed_count": 10,
+    "max_prob": 0.9972324967384338,
+    "mean_prob": 0.154123455286026,
+    "missed_rate": 0.07042253521126761
+  },
+  {
+    "contact_id": "db283a9f-c3fa-47d3-80ba-dd108e9bbdd3",
+    "total_msgs": 156,
+    "missed_count": 10,
+    "max_prob": 0.9932241439819336,
+    "mean_prob": 0.12604287266731262,
+    "missed_rate": 0.0641025641025641
+  },
+  {
+    "contact_id": "f2bbf9ba-191f-4d7c-8569-8e1a4d38e8c4",
+    "total_msgs": 112,
+    "missed_count": 10,
+    "max_prob": 0.9992541670799255,
+    "mean_prob": 0.14131662249565125,
+    "missed_rate": 0.08928571428571429
+  },
+  {
+    "contact_id": "5614cb50-a375-4f7d-8d9e-151547def8f0",
+    "total_msgs": 131,
+    "missed_count": 10,
+    "max_prob": 0.9993957281112671,
+    "mean_prob": 0.15227791666984558,
+    "missed_rate": 0.07633587786259542
+  },
+  {
+    "contact_id": "59ae5778-8214-4b2d-8ce8-dbbce2b168d2",
+    "total_msgs": 173,
+    "missed_count": 10,
+    "max_prob": 0.9976938366889954,
+    "mean_prob": 0.16317203640937805,
+    "missed_rate": 0.057803468208092484
+  },
+  {
+    "contact_id": "4ab4f0d8-bdda-45ff-95d5-80f4d08cfe73",
+    "total_msgs": 111,
+    "missed_count": 9,
+    "max_prob": 0.9971867203712463,
+    "mean_prob": 0.16050878167152405,
+    "missed_rate": 0.08108108108108109
+  },
+  {
+    "contact_id": "3fad7269-47bb-41b1-a976-f2e17119f61b",
+    "total_msgs": 123,
+    "missed_count": 9,
+    "max_prob": 0.9965838193893433,
+    "mean_prob": 0.14897479116916656,
+    "missed_rate": 0.07317073170731707
+  },
+  {
+    "contact_id": "51becdc1-9246-46d1-916b-7f9b44baafdc",
+    "total_msgs": 114,
+    "missed_count": 9,
+    "max_prob": 0.9964054822921753,
+    "mean_prob": 0.1600378155708313,
+    "missed_rate": 0.07894736842105263
+  },
+  {
+    "contact_id": "39c81aeb-2b46-4ecc-b085-ea569c8fc81a",
+    "total_msgs": 103,
+    "missed_count": 7,
+    "max_prob": 0.9960561990737915,
+    "mean_prob": 0.14188748598098755,
+    "missed_rate": 0.06796116504854369
+  },
+  {
+    "contact_id": "becc49a9-48a2-46cd-bf64-4f5ccd23e5aa",
+    "total_msgs": 109,
+    "missed_count": 7,
+    "max_prob": 0.9958546161651611,
+    "mean_prob": 0.1457122564315796,
+    "missed_rate": 0.06422018348623854
+  },
+  {
+    "contact_id": "4d84f2c4-36cf-4974-a536-fdcb527b419b",
+    "total_msgs": 123,
+    "missed_count": 6,
+    "max_prob": 0.9966235160827637,
+    "mean_prob": 0.1396845430135727,
+    "missed_rate": 0.04878048780487805
+  },
+  {
+    "contact_id": "c0bef3e4-a715-46fb-8bc2-6d2b642530f6",
+    "total_msgs": 119,
+    "missed_count": 6,
+    "max_prob": 0.9992959499359131,
+    "mean_prob": 0.12246884405612946,
+    "missed_rate": 0.05042016806722689
+  },
+  {
+    "contact_id": "4569be2a-c649-4b2b-af10-7a5184a13315",
+    "total_msgs": 117,
+    "missed_count": 5,
+    "max_prob": 0.9966021776199341,
+    "mean_prob": 0.143656924366951,
+    "missed_rate": 0.042735042735042736
+  }
+]

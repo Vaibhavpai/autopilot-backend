@@ -1,0 +1,522 @@
+[
+  {
+    "contact_id": "8b287567-2202-4e5d-9eeb-ae2d1781b931",
+    "total_sent": 153,
+    "forgotten_count": 26,
+    "max_prob": 0.9996594190597534,
+    "mean_prob": 0.16047954559326172,
+    "forgotten_rate": 0.16993464052287582
+  },
+  {
+    "contact_id": "a04c12c9-201f-4dbe-a3e3-892c7c4427e6",
+    "total_sent": 148,
+    "forgotten_count": 24,
+    "max_prob": 0.999685525894165,
+    "mean_prob": 0.16202925145626068,
+    "forgotten_rate": 0.16216216216216217
+  },
+  {
+    "contact_id": "ddb7afc3-e33a-4564-a1cc-9b24409e7768",
+    "total_sent": 133,
+    "forgotten_count": 23,
+    "max_prob": 0.99969881772995,
+    "mean_prob": 0.15389467775821686,
+    "forgotten_rate": 0.17293233082706766
+  },
+  {
+    "contact_id": "41beb30a-e14f-4664-abf0-ac6053cd12c3",
+    "total_sent": 128,
+    "forgotten_count": 21,
+    "max_prob": 0.9996611475944519,
+    "mean_prob": 0.15341590344905853,
+    "forgotten_rate": 0.1640625
+  },
+  {
+    "contact_id": "5e440e9c-b1ac-4514-9c3a-5f3c1a07bbcb",
+    "total_sent": 144,
+    "forgotten_count": 19,
+    "max_prob": 0.9984080791473389,
+    "mean_prob": 0.12172026187181473,
+    "forgotten_rate": 0.13194444444444445
+  },
+  {
+    "contact_id": "fd8fdd78-c6f0-4793-8e0f-4eb6717df40c",
+    "total_sent": 141,
+    "forgotten_count": 17,
+    "max_prob": 0.9995856881141663,
+    "mean_prob": 0.10027379542589188,
+    "forgotten_rate": 0.12056737588652482
+  },
+  {
+    "contact_id": "ebe13cca-cc25-4e8f-a590-e5001aff9716",
+    "total_sent": 137,
+    "forgotten_count": 17,
+    "max_prob": 0.9997039437294006,
+    "mean_prob": 0.11292137950658798,
+    "forgotten_rate": 0.12408759124087591
+  },
+  {
+    "contact_id": "c0bef3e4-a715-46fb-8bc2-6d2b642530f6",
+    "total_sent": 189,
+    "forgotten_count": 15,
+    "max_prob": 0.9997189044952393,
+    "mean_prob": 0.08112490177154541,
+    "forgotten_rate": 0.07936507936507936
+  },
+  {
+    "contact_id": "4d84f2c4-36cf-4974-a536-fdcb527b419b",
+    "total_sent": 188,
+    "forgotten_count": 15,
+    "max_prob": 0.9997492432594299,
+    "mean_prob": 0.08029881119728088,
+    "forgotten_rate": 0.0797872340425532
+  },
+  {
+    "contact_id": "7899b031-b2c4-4ba4-9d3e-42c41cc37f66",
+    "total_sent": 157,
+    "forgotten_count": 15,
+    "max_prob": 0.9994754195213318,
+    "mean_prob": 0.08404558897018433,
+    "forgotten_rate": 0.09554140127388536
+  },
+  {
+    "contact_id": "f06d335b-18a9-42e6-a8da-6a5fed90d34c",
+    "total_sent": 132,
+    "forgotten_count": 15,
+    "max_prob": 0.9996732473373413,
+    "mean_prob": 0.12119113653898239,
+    "forgotten_rate": 0.11363636363636363
+  },
+  {
+    "contact_id": "314feea9-ca49-40e9-9a96-18a2671b0793",
+    "total_sent": 138,
+    "forgotten_count": 14,
+    "max_prob": 0.9995931386947632,
+    "mean_prob": 0.0937870442867279,
+    "forgotten_rate": 0.10144927536231885
+  },
+  {
+    "contact_id": "835b3b38-c5fc-4167-bf67-18bfa384a067",
+    "total_sent": 139,
+    "forgotten_count": 14,
+    "max_prob": 0.9982095956802368,
+    "mean_prob": 0.09627167880535126,
+    "forgotten_rate": 0.10071942446043165
+  },
+  {
+    "contact_id": "8091bdfb-5610-419e-8c09-077dd83bbefd",
+    "total_sent": 119,
+    "forgotten_count": 14,
+    "max_prob": 0.9996752142906189,
+    "mean_prob": 0.1159723550081253,
+    "forgotten_rate": 0.11764705882352941
+  },
+  {
+    "contact_id": "d82bc0c8-adfc-4e8a-9aaf-4fa87e7d8d5c",
+    "total_sent": 119,
+    "forgotten_count": 14,
+    "max_prob": 0.9996948838233948,
+    "mean_prob": 0.11625875532627106,
+    "forgotten_rate": 0.11764705882352941
+  },
+  {
+    "contact_id": "acd3bf3a-d50c-4c8b-9e5a-1ee68687a1f8",
+    "total_sent": 138,
+    "forgotten_count": 14,
+    "max_prob": 0.987705409526825,
+    "mean_prob": 0.10071972012519836,
+    "forgotten_rate": 0.10144927536231885
+  },
+  {
+    "contact_id": "6e8282d7-828f-4c88-8c2b-8a3f47ae5cc3",
+    "total_sent": 142,
+    "forgotten_count": 13,
+    "max_prob": 0.9997243881225586,
+    "mean_prob": 0.09244199842214584,
+    "forgotten_rate": 0.09154929577464789
+  },
+  {
+    "contact_id": "72fb2ed7-4a87-4fdd-a212-4165bd6af1cd",
+    "total_sent": 115,
+    "forgotten_count": 13,
+    "max_prob": 0.9997060894966125,
+    "mean_prob": 0.10401955991983414,
+    "forgotten_rate": 0.11304347826086956
+  },
+  {
+    "contact_id": "9e18d6fd-9aec-4ec2-a25a-a57228e66bfb",
+    "total_sent": 158,
+    "forgotten_count": 13,
+    "max_prob": 0.9997463822364807,
+    "mean_prob": 0.08958547562360764,
+    "forgotten_rate": 0.08227848101265822
+  },
+  {
+    "contact_id": "ad1b3087-9d40-4b99-b3ab-55d9fb180137",
+    "total_sent": 161,
+    "forgotten_count": 13,
+    "max_prob": 0.9996992349624634,
+    "mean_prob": 0.08445978164672852,
+    "forgotten_rate": 0.08074534161490683
+  },
+  {
+    "contact_id": "db283a9f-c3fa-47d3-80ba-dd108e9bbdd3",
+    "total_sent": 137,
+    "forgotten_count": 13,
+    "max_prob": 0.9997173547744751,
+    "mean_prob": 0.09110954403877258,
+    "forgotten_rate": 0.0948905109489051
+  },
+  {
+    "contact_id": "f2bbf9ba-191f-4d7c-8569-8e1a4d38e8c4",
+    "total_sent": 173,
+    "forgotten_count": 13,
+    "max_prob": 0.9997020959854126,
+    "mean_prob": 0.07854233682155609,
+    "forgotten_rate": 0.07514450867052024
+  },
+  {
+    "contact_id": "4c52901f-2fb8-4a16-86be-e5dd808762f3",
+    "total_sent": 174,
+    "forgotten_count": 13,
+    "max_prob": 0.9996736645698547,
+    "mean_prob": 0.07213696092367172,
+    "forgotten_rate": 0.07471264367816093
+  },
+  {
+    "contact_id": "3e3fb487-acbc-4092-8000-6018144f62b4",
+    "total_sent": 96,
+    "forgotten_count": 13,
+    "max_prob": 0.9997041821479797,
+    "mean_prob": 0.14182721078395844,
+    "forgotten_rate": 0.13541666666666666
+  },
+  {
+    "contact_id": "624b6bf3-4787-409e-8a02-57ca8be38dcc",
+    "total_sent": 145,
+    "forgotten_count": 13,
+    "max_prob": 0.9996421933174133,
+    "mean_prob": 0.09445888549089432,
+    "forgotten_rate": 0.0896551724137931
+  },
+  {
+    "contact_id": "0277f864-ba56-414c-a08a-4ea5171d5eb0",
+    "total_sent": 127,
+    "forgotten_count": 12,
+    "max_prob": 0.9984264969825745,
+    "mean_prob": 0.08809924125671387,
+    "forgotten_rate": 0.09448818897637795
+  },
+  {
+    "contact_id": "b4185ead-2676-477c-8bfd-0d866a5f0396",
+    "total_sent": 131,
+    "forgotten_count": 12,
+    "max_prob": 0.9997320771217346,
+    "mean_prob": 0.08994532376527786,
+    "forgotten_rate": 0.0916030534351145
+  },
+  {
+    "contact_id": "41356578-7f87-45c6-8556-6867fb1ee8b0",
+    "total_sent": 122,
+    "forgotten_count": 12,
+    "max_prob": 0.9985266923904419,
+    "mean_prob": 0.10887902975082397,
+    "forgotten_rate": 0.09836065573770492
+  },
+  {
+    "contact_id": "ed1fa1c5-da21-4f74-af14-d41484eb7e51",
+    "total_sent": 137,
+    "forgotten_count": 12,
+    "max_prob": 0.9996680617332458,
+    "mean_prob": 0.09018103778362274,
+    "forgotten_rate": 0.08759124087591241
+  },
+  {
+    "contact_id": "2bfe9aef-fe7d-4c05-ba65-85fb922e7e2e",
+    "total_sent": 148,
+    "forgotten_count": 10,
+    "max_prob": 0.9983484745025635,
+    "mean_prob": 0.07502273470163345,
+    "forgotten_rate": 0.06756756756756757
+  },
+  {
+    "contact_id": "1450434f-b3fb-4b1f-a25e-c97f53361b79",
+    "total_sent": 119,
+    "forgotten_count": 10,
+    "max_prob": 0.9997043013572693,
+    "mean_prob": 0.08115021884441376,
+    "forgotten_rate": 0.08403361344537816
+  },
+  {
+    "contact_id": "8116dac1-4282-41c5-bb1a-d45c0be29115",
+    "total_sent": 114,
+    "forgotten_count": 10,
+    "max_prob": 0.9996623992919922,
+    "mean_prob": 0.08772668242454529,
+    "forgotten_rate": 0.08771929824561403
+  },
+  {
+    "contact_id": "7d9829ce-51c7-42c2-8f50-75baf07bbcf5",
+    "total_sent": 112,
+    "forgotten_count": 10,
+    "max_prob": 0.9972819089889526,
+    "mean_prob": 0.08062126487493515,
+    "forgotten_rate": 0.08928571428571429
+  },
+  {
+    "contact_id": "83a392d8-d52d-408e-8254-885866f69640",
+    "total_sent": 145,
+    "forgotten_count": 10,
+    "max_prob": 0.9996318221092224,
+    "mean_prob": 0.0653161033987999,
+    "forgotten_rate": 0.06896551724137931
+  },
+  {
+    "contact_id": "ba06634e-a6a7-4a0c-b823-6d3d1ba1aced",
+    "total_sent": 112,
+    "forgotten_count": 10,
+    "max_prob": 0.9995943307876587,
+    "mean_prob": 0.08755327016115189,
+    "forgotten_rate": 0.08928571428571429
+  },
+  {
+    "contact_id": "8e3284bd-0ce4-4013-802a-011598231a71",
+    "total_sent": 152,
+    "forgotten_count": 10,
+    "max_prob": 0.9982095956802368,
+    "mean_prob": 0.06680207699537277,
+    "forgotten_rate": 0.06578947368421052
+  },
+  {
+    "contact_id": "aca67d4a-7881-4958-85c4-f2bc4b4f6fcb",
+    "total_sent": 136,
+    "forgotten_count": 10,
+    "max_prob": 0.9996532797813416,
+    "mean_prob": 0.07748977094888687,
+    "forgotten_rate": 0.07352941176470588
+  },
+  {
+    "contact_id": "106e5a02-ba2f-4e17-9956-8deef3c0190a",
+    "total_sent": 156,
+    "forgotten_count": 9,
+    "max_prob": 0.9996798634529114,
+    "mean_prob": 0.05855963006615639,
+    "forgotten_rate": 0.057692307692307696
+  },
+  {
+    "contact_id": "2be00cb2-3e20-44a1-9dd9-6573a48c9fa2",
+    "total_sent": 137,
+    "forgotten_count": 9,
+    "max_prob": 0.9996255040168762,
+    "mean_prob": 0.06835762411355972,
+    "forgotten_rate": 0.06569343065693431
+  },
+  {
+    "contact_id": "b5f7ada8-3951-4628-a81c-37ff3a08ca6c",
+    "total_sent": 127,
+    "forgotten_count": 9,
+    "max_prob": 0.986411988735199,
+    "mean_prob": 0.07503719627857208,
+    "forgotten_rate": 0.07086614173228346
+  },
+  {
+    "contact_id": "554e450b-739a-4e37-9499-748f24d7dd4d",
+    "total_sent": 121,
+    "forgotten_count": 9,
+    "max_prob": 0.9996775984764099,
+    "mean_prob": 0.07700753957033157,
+    "forgotten_rate": 0.0743801652892562
+  },
+  {
+    "contact_id": "59ae5778-8214-4b2d-8ce8-dbbce2b168d2",
+    "total_sent": 126,
+    "forgotten_count": 9,
+    "max_prob": 0.9996748566627502,
+    "mean_prob": 0.06882820278406143,
+    "forgotten_rate": 0.07142857142857142
+  },
+  {
+    "contact_id": "3fad7269-47bb-41b1-a976-f2e17119f61b",
+    "total_sent": 174,
+    "forgotten_count": 9,
+    "max_prob": 0.9997356534004211,
+    "mean_prob": 0.05447845906019211,
+    "forgotten_rate": 0.05172413793103448
+  },
+  {
+    "contact_id": "becc49a9-48a2-46cd-bf64-4f5ccd23e5aa",
+    "total_sent": 167,
+    "forgotten_count": 8,
+    "max_prob": 0.999641478061676,
+    "mean_prob": 0.052177753299474716,
+    "forgotten_rate": 0.04790419161676647
+  },
+  {
+    "contact_id": "39c81aeb-2b46-4ecc-b085-ea569c8fc81a",
+    "total_sent": 179,
+    "forgotten_count": 8,
+    "max_prob": 0.9996411204338074,
+    "mean_prob": 0.048211608082056046,
+    "forgotten_rate": 0.0446927374301676
+  },
+  {
+    "contact_id": "742e1e30-fe61-4e39-88e3-4ad51b8afe6f",
+    "total_sent": 114,
+    "forgotten_count": 8,
+    "max_prob": 0.9995377659797668,
+    "mean_prob": 0.07333102822303772,
+    "forgotten_rate": 0.07017543859649122
+  },
+  {
+    "contact_id": "4569be2a-c649-4b2b-af10-7a5184a13315",
+    "total_sent": 143,
+    "forgotten_count": 8,
+    "max_prob": 0.9997028112411499,
+    "mean_prob": 0.059172630310058594,
+    "forgotten_rate": 0.055944055944055944
+  },
+  {
+    "contact_id": "1833eaf2-c4d6-495b-8762-5acf251ba82a",
+    "total_sent": 140,
+    "forgotten_count": 8,
+    "max_prob": 0.9997251629829407,
+    "mean_prob": 0.06406167894601822,
+    "forgotten_rate": 0.05714285714285714
+  },
+  {
+    "contact_id": "ebdecd2b-bacc-4808-8759-74ba4a6edd5c",
+    "total_sent": 112,
+    "forgotten_count": 8,
+    "max_prob": 0.9984191060066223,
+    "mean_prob": 0.07080332934856415,
+    "forgotten_rate": 0.07142857142857142
+  },
+  {
+    "contact_id": "4ab4f0d8-bdda-45ff-95d5-80f4d08cfe73",
+    "total_sent": 190,
+    "forgotten_count": 7,
+    "max_prob": 0.9996976852416992,
+    "mean_prob": 0.03932332620024681,
+    "forgotten_rate": 0.03684210526315789
+  },
+  {
+    "contact_id": "9ea24076-5f4b-4a0d-b648-796ca854ac73",
+    "total_sent": 114,
+    "forgotten_count": 7,
+    "max_prob": 0.9995843172073364,
+    "mean_prob": 0.0574704185128212,
+    "forgotten_rate": 0.06140350877192982
+  },
+  {
+    "contact_id": "bdbc9c78-038c-4d02-810d-04d53cd844cc",
+    "total_sent": 114,
+    "forgotten_count": 7,
+    "max_prob": 0.999012291431427,
+    "mean_prob": 0.06049641966819763,
+    "forgotten_rate": 0.06140350877192982
+  },
+  {
+    "contact_id": "4e4c3a89-82f4-46d4-ba83-245d3756e207",
+    "total_sent": 128,
+    "forgotten_count": 7,
+    "max_prob": 0.9977619051933289,
+    "mean_prob": 0.04927155002951622,
+    "forgotten_rate": 0.0546875
+  },
+  {
+    "contact_id": "543cf1d0-d211-4888-b6eb-113a6f422e5f",
+    "total_sent": 143,
+    "forgotten_count": 7,
+    "max_prob": 0.9996657371520996,
+    "mean_prob": 0.05492353066802025,
+    "forgotten_rate": 0.04895104895104895
+  },
+  {
+    "contact_id": "67fa66d3-f76d-4c8f-82f6-13d5f4e397fb",
+    "total_sent": 143,
+    "forgotten_count": 7,
+    "max_prob": 0.9997246265411377,
+    "mean_prob": 0.05604575201869011,
+    "forgotten_rate": 0.04895104895104895
+  },
+  {
+    "contact_id": "5614cb50-a375-4f7d-8d9e-151547def8f0",
+    "total_sent": 134,
+    "forgotten_count": 7,
+    "max_prob": 0.999566912651062,
+    "mean_prob": 0.061535272747278214,
+    "forgotten_rate": 0.05223880597014925
+  },
+  {
+    "contact_id": "45b5512b-0995-42a1-8769-7041371627b1",
+    "total_sent": 123,
+    "forgotten_count": 6,
+    "max_prob": 0.982749342918396,
+    "mean_prob": 0.04910138621926308,
+    "forgotten_rate": 0.04878048780487805
+  },
+  {
+    "contact_id": "c38517cb-aec1-47d7-88cc-5c2138e599a0",
+    "total_sent": 118,
+    "forgotten_count": 6,
+    "max_prob": 0.9996369481086731,
+    "mean_prob": 0.05425675958395004,
+    "forgotten_rate": 0.05084745762711865
+  },
+  {
+    "contact_id": "10638812-831a-40ce-87b1-e057ea81b2cb",
+    "total_sent": 143,
+    "forgotten_count": 6,
+    "max_prob": 0.99970543384552,
+    "mean_prob": 0.044032901525497437,
+    "forgotten_rate": 0.04195804195804196
+  },
+  {
+    "contact_id": "42651c9f-1d88-4070-87f0-a9c0d9b905ae",
+    "total_sent": 107,
+    "forgotten_count": 6,
+    "max_prob": 0.9997406601905823,
+    "mean_prob": 0.06179668381810188,
+    "forgotten_rate": 0.056074766355140186
+  },
+  {
+    "contact_id": "f488f601-fe0a-4036-91d9-169b7a3eed91",
+    "total_sent": 123,
+    "forgotten_count": 6,
+    "max_prob": 0.999637246131897,
+    "mean_prob": 0.054749745875597,
+    "forgotten_rate": 0.04878048780487805
+  },
+  {
+    "contact_id": "d8bc8f1c-64ef-46da-8fad-0c0d6f85f716",
+    "total_sent": 136,
+    "forgotten_count": 5,
+    "max_prob": 0.9984270930290222,
+    "mean_prob": 0.04204075410962105,
+    "forgotten_rate": 0.03676470588235294
+  },
+  {
+    "contact_id": "96b77b31-b43a-4666-8231-a5cddac19e96",
+    "total_sent": 130,
+    "forgotten_count": 5,
+    "max_prob": 0.9984028339385986,
+    "mean_prob": 0.048476751893758774,
+    "forgotten_rate": 0.038461538461538464
+  },
+  {
+    "contact_id": "51becdc1-9246-46d1-916b-7f9b44baafdc",
+    "total_sent": 155,
+    "forgotten_count": 4,
+    "max_prob": 0.9996580481529236,
+    "mean_prob": 0.032122354954481125,
+    "forgotten_rate": 0.025806451612903226
+  },
+  {
+    "contact_id": "f9db351a-70fc-464c-a608-d952d4450974",
+    "total_sent": 104,
+    "forgotten_count": 3,
+    "max_prob": 0.9978196024894714,
+    "mean_prob": 0.028492610901594162,
+    "forgotten_rate": 0.028846153846153848
+  }
+]

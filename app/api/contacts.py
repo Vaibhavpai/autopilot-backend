@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from typing import List, Optional
-from app.core.database import contacts_db
+from app.core.db_helpers import get_all_contacts, get_contact
 
 router = APIRouter()
 
 
 @router.get("/")
-def get_all_contacts(
+async def get_all_contacts_endpoint(
     tag: Optional[str] = None,
     min_score: Optional[float] = None,
     platform: Optional[str] = None,
@@ -15,7 +15,7 @@ def get_all_contacts(
     Get all scored contact profiles.
     Optional filters: tag, min_score, platform
     """
-    profiles = list(contacts_db.values())
+    profiles = await get_all_contacts()
 
     if tag:
         profiles = [p for p in profiles if p.get("tag") == tag.upper()]
@@ -30,9 +30,9 @@ def get_all_contacts(
 
 
 @router.get("/summary")
-def get_summary():
+async def get_summary():
     """Dashboard summary stats."""
-    profiles = list(contacts_db.values())
+    profiles = await get_all_contacts()
     if not profiles:
         return {"message": "No contacts scored yet. Run the pipeline first."}
 
@@ -53,9 +53,9 @@ def get_summary():
 
 
 @router.get("/{contact_id}")
-def get_contact(contact_id: str):
+async def get_contact_endpoint(contact_id: str):
     """Get single contact profile by ID."""
-    profile = contacts_db.get(contact_id)
+    profile = await get_contact(contact_id)
     if not profile:
         raise HTTPException(status_code=404, detail=f"Contact '{contact_id}' not found")
     return profile

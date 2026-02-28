@@ -13,14 +13,16 @@ This is what n8n triggers on schedule.
 import uuid
 from datetime import datetime
 from typing import Dict, List, Any
-
-from app.core.database import messages_db, contacts_db, actions_db, pipeline_log
+from app.core.db_helpers import (
+    get_all_messages, save_contact, clear_actions, save_actions,
+    save_pipeline_run, update_pipeline_run
+)
 from app.services.scoring_engine import score_contact
 from app.services.action_generator import generate_actions_for_all
 from app.services.n8n_client import notify_pipeline_complete, notify_new_actions
 
 
-def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
+async def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
     """
     Full pipeline run. Returns summary dict.
 
@@ -44,18 +46,19 @@ def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
         "trigger": trigger,
         "error": None,
     }
-    pipeline_log.append(log_entry)
+    await save_pipeline_run(log_entry)
 
     try:
         # ── STAGE 1: Score all contacts ─────────────────────────
-        print(f"\n[STAGE 1] Scoring {len(messages_db)} contacts...")
+        messages_dict = await get_all_messages()
+        print(f"\n[STAGE 1] Scoring {len(messages_dict)} contacts...")
         scored_profiles = []
 
-        for contact_name, messages in messages_db.items():
+        for contact_name, messages in messages_dict.items():
             print(f"  → Scoring: {contact_name} ({len(messages)} msgs)")
             profile = score_contact(contact_name, messages)
             if profile:
-                contacts_db[profile["contact_id"]] = profile
+                await save_contact(profile)
                 scored_profiles.append(profile)
 
         print(f"  ✓ Scored {len(scored_profiles)} contacts")
@@ -63,9 +66,10 @@ def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
         # ── STAGE 2: Generate AI Actions ────────────────────────
         print(f"\n[STAGE 2] Generating AI actions...")
         # Clear old pending actions
-        actions_db.clear()
+        await clear_actions()
         new_actions = generate_actions_for_all(scored_profiles)
-        actions_db.extend(new_actions)
+        if new_actions:
+            await save_actions(new_actions)
         print(f"  ✓ Generated {len(new_actions)} actions")
 
         # ── STAGE 3: Notify n8n ─────────────────────────────────
@@ -79,13 +83,15 @@ def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
         completed_at = datetime.now()
         duration = (completed_at - started_at).total_seconds()
 
-        log_entry.update({
+        updates = {
             "completed_at": completed_at,
             "contacts_processed": len(scored_profiles),
             "actions_generated": len(new_actions),
             "status": "completed",
             "duration_seconds": round(duration, 2),
-        })
+        }
+        await update_pipeline_run(run_id, updates)
+        log_entry.update(updates)
 
         print(f"\n[PIPELINE] ✓ Complete in {duration:.1f}s")
         print(f"  Contacts: {len(scored_profiles)} | Actions: {len(new_actions)}")
@@ -94,11 +100,13 @@ def run_pipeline(trigger: str = "manual") -> Dict[str, Any]:
         return log_entry
 
     except Exception as e:
-        log_entry.update({
+        updates = {
             "completed_at": datetime.now(),
             "status": "failed",
             "error": str(e),
-        })
+        }
+        await update_pipeline_run(run_id, updates)
+        log_entry.update(updates)
         print(f"[PIPELINE] ✗ Failed: {e}")
         raise
 

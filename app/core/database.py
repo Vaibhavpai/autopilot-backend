@@ -1,17 +1,16 @@
-"""
-Simple in-memory store — swap for SQLAlchemy + Postgres in production.
-All data lives in these dicts keyed by contact_id.
-"""
-from typing import Dict, List, Any
+from motor.motor_asyncio import AsyncIOMotorClient
+import os
+from dotenv import load_dotenv
 
-# Raw parsed messages: { contact_id: [{ timestamp, sender, content, platform }] }
-messages_db: Dict[str, List[Dict[str, Any]]] = {}
+load_dotenv()
 
-# Computed contact profiles: { contact_id: ContactProfile }
-contacts_db: Dict[str, Any] = {}
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
 
-# AI-generated action suggestions
-actions_db: List[Dict[str, Any]] = []
+client = AsyncIOMotorClient(MONGO_URL)
 
-# Pipeline run log
-pipeline_log: List[Dict[str, Any]] = []
+db = client["autopilot"]
+
+messages_collection = db["messages"]
+contacts_collection = db["contacts"]
+actions_collection = db["actions"]
+pipeline_runs_collection = db["pipeline_runs"]

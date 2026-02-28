@@ -1,6 +1,9 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException, Form
 from typing import Optional
-from app.core.database import messages_db
+from app.core.db_helpers import (
+    save_messages, clear_messages, count_messages, count_contacts,
+    get_all_messages
+)
 from app.parsers.whatsapp_parser import extract_contacts_from_whatsapp
 from app.parsers.telegram_parser import parse_telegram
 from app.parsers.csv_parser import parse_csv
@@ -10,28 +13,26 @@ from fastapi.responses import PlainTextResponse
 router = APIRouter()
 
 
-def _load_contacts(parsed: dict, platform_label: str) -> tuple[int, int]:
+async def _load_contacts(parsed: dict, platform_label: str) -> tuple[int, int]:
     """Merge parsed contacts into the DB. Returns (contacts_added, total_messages)."""
     total_msgs = 0
     for name, msgs in parsed.items():
         cid = name
-        if cid not in messages_db:
-            messages_db[cid] = []
-        messages_db[cid].extend(msgs)
+        await save_messages(cid, msgs)
         total_msgs += len(msgs)
     return len(parsed), total_msgs
 
 
 @router.post("/synthetic")
-def load_synthetic_data():
+async def load_synthetic_data():
     """
     Generate and load synthetic demo dataset (8 contacts, ~2000 messages).
     Call this first to get something working immediately.
     """
     print("[INGEST] Generating synthetic dataset...")
-    messages_db.clear()
+    await clear_messages()
     dataset = generate_synthetic_dataset()
-    contacts_added, total_msgs = _load_contacts(dataset, "synthetic")
+    contacts_added, total_msgs = await _load_contacts(dataset, "synthetic")
     return {
         "success": True,
         "contacts_found": contacts_added,
@@ -62,11 +63,11 @@ async def upload_whatsapp(
 
     content = (await file.read()).decode("utf-8", errors="ignore")
     if clear_existing:
-        messages_db.clear()
+        await clear_messages()
 
     try:
         parsed = extract_contacts_from_whatsapp(content, your_name)
-        contacts_added, total_msgs = _load_contacts(parsed, "whatsapp")
+        contacts_added, total_msgs = await _load_contacts(parsed, "whatsapp")
     except Exception as e:
         raise HTTPException(status_code=422, detail=f"Parse error: {str(e)}")
 
@@ -90,11 +91,11 @@ async def upload_telegram(
 
     content = (await file.read()).decode("utf-8", errors="ignore")
     if clear_existing:
-        messages_db.clear()
+        await clear_messages()
 
     try:
         parsed = parse_telegram(content, your_name)
-        contacts_added, total_msgs = _load_contacts(parsed, "telegram")
+        contacts_added, total_msgs = await _load_contacts(parsed, "telegram")
     except Exception as e:
         raise HTTPException(status_code=422, detail=f"Parse error: {str(e)}")
 
@@ -115,11 +116,11 @@ async def upload_csv(
     """Upload generic CSV interaction log."""
     content = (await file.read()).decode("utf-8", errors="ignore")
     if clear_existing:
-        messages_db.clear()
+        await clear_messages()
 
     try:
         parsed = parse_csv(content, your_name)
-        contacts_added, total_msgs = _load_contacts(parsed, "csv")
+        contacts_added, total_msgs = await _load_contacts(parsed, "csv")
     except ValueError as e:
         raise HTTPException(status_code=422, detail=str(e))
     except Exception as e:
@@ -134,20 +135,21 @@ async def upload_csv(
 
 
 @router.get("/status")
-def ingest_status():
-    """See what's currently loaded in memory."""
+async def ingest_status():
+    """See what's currently loaded in MongoDB."""
+    messages_dict = await get_all_messages()
     return {
-        "contacts_loaded": len(messages_db),
+        "contacts_loaded": len(messages_dict),
         "contacts": [
             {"name": name, "message_count": len(msgs)}
-            for name, msgs in messages_db.items()
+            for name, msgs in messages_dict.items()
         ],
-        "total_messages": sum(len(m) for m in messages_db.values()),
+        "total_messages": sum(len(m) for m in messages_dict.values()),
     }
 
 
 @router.delete("/clear")
-def clear_data():
+async def clear_data():
     """Wipe all loaded data (useful for re-ingestion)."""
-    messages_db.clear()
+    await clear_messages()
     return {"success": True, "message": "All data cleared."}

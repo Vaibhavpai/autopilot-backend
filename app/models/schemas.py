@@ -1,61 +1,89 @@
-from pydantic import BaseModel
-from typing import Optional, List
+from pydantic import BaseModel, Field
+from typing import Optional
 from datetime import datetime
 
 
+# ----------------------------
+# MESSAGE
+# ----------------------------
+
 class Message(BaseModel):
+    contact_id: str
     timestamp: datetime
-    sender: str          # "user" or contact name
+    sender: str
     content: str
-    platform: str        # whatsapp | telegram | csv
+    platform: str  # whatsapp | telegram | csv
+
+    # ML Outputs
+    sentiment_score: Optional[float] = None
+    importance_score: Optional[float] = None
+    intent_label: Optional[str] = None
+    attention_gap_flag: Optional[bool] = False
+    plan_detected: Optional[bool] = False
+    extracted_date: Optional[datetime] = None
+
+
+# ----------------------------
+# CONTACT
+# ----------------------------
+
+class Contact(BaseModel):
     contact_id: str
-
-
-class WeeklyActivity(BaseModel):
-    week: str            # e.g. "2024-W03"
-    message_count: int
-
-
-class ContactProfile(BaseModel):
-    contact_id: str
-    name: str
-    handle: Optional[str] = ""
+    name: Optional[str]
     platform: str
-    avatar: str          # initials
-    total_messages: int
-    last_message_at: Optional[datetime]
-    days_since_last_message: int
+    avatar: Optional[str]
 
-    # Scoring components
-    recency_score: float       # 0–100
-    frequency_score: float     # 0–100
-    response_ratio: float      # 0–1 (how often they reply)
-    sentiment_avg: float       # -1 to +1 (VADER compound)
-    health_score: float        # 0–100 composite
+    health_score: Optional[float] = 0.0
+    recency_score: Optional[float] = 0.0
+    frequency_score: Optional[float] = 0.0
+    response_ratio: Optional[float] = 0.0
+    sentiment_avg: Optional[float] = 0.0
 
-    # Behavioral flags
-    drift_detected: bool
-    is_ghosted: bool           # >30 days silent, you sent last
-    drift_severity: str        # none | mild | moderate | severe
+    drift_detected: Optional[bool] = False
+    drift_severity: Optional[str] = None
+    is_ghosted: Optional[bool] = False
 
-    # Enrichment
-    last_topic: Optional[str] = ""
-    tag: str                   # ACTIVE | CLOSE | STABLE | FADING | GHOSTED
-    trend: str                 # up | stable | down
-    weekly_activity: List[WeeklyActivity] = []
+    tag: Optional[str] = None
+    trend: Optional[str] = None
+    last_topic: Optional[str] = None
+    days_since: Optional[int] = 0
+    total_messages: Optional[int] = 0
+    last_message_at: Optional[datetime] = None
+
+    # ML Outputs
+    churn_probability: Optional[float] = 0.0
+    engagement_decay_rate: Optional[float] = 0.0
+    delay_anomaly_score: Optional[float] = 0.0
+
+    updated_at: Optional[datetime] = None
 
 
-class ActionSuggestion(BaseModel):
+
+# ----------------------------
+# ACTION
+# ----------------------------
+
+class Action(BaseModel):
     action_id: str
     contact_id: str
-    contact_name: str
-    action_type: str           # RE-ENGAGE | FOLLOW-UP | CHECK-IN | BIRTHDAY
-    urgency: str               # CRITICAL | HIGH | MEDIUM | LOW
-    suggested_message: str
-    reason: str
-    created_at: datetime
-    status: str = "pending"    # pending | sent | dismissed
+    contact_name: Optional[str]
 
+    action_type: str
+    urgency: str
+    suggested_message: Optional[str]
+    reason: Optional[str]
+    status: str
+    created_at: datetime
+
+    # ML Confidence
+    followup_probability: Optional[float] = None
+    confidence_score: Optional[float] = None
+    recommended_time: Optional[datetime] = None
+
+
+# ----------------------------
+# PIPELINE RUN
+# ----------------------------
 
 class PipelineRun(BaseModel):
     run_id: str
@@ -63,12 +91,7 @@ class PipelineRun(BaseModel):
     completed_at: Optional[datetime]
     contacts_processed: int
     actions_generated: int
-    status: str                # running | completed | failed
-    error: Optional[str] = None
-
-
-class IngestResponse(BaseModel):
-    success: bool
-    contacts_found: int
-    messages_parsed: int
-    message: str
+    status: str
+    trigger: str
+    duration_seconds: Optional[float]
+    error: Optional[str]

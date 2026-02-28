@@ -3,10 +3,29 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import contacts, pipeline, actions, ingest
 from app.core.scheduler import start_scheduler, stop_scheduler
+from app.core.database import (
+    messages_collection,
+    contacts_collection,
+    actions_collection,
+    pipeline_runs_collection
+)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Create indexes on startup
+    try:
+        await messages_collection.create_index("contact_id")
+        await messages_collection.create_index("timestamp")
+        await contacts_collection.create_index("contact_id", unique=True)
+        await actions_collection.create_index("contact_id")
+        await actions_collection.create_index("status")
+        await pipeline_runs_collection.create_index("run_id")
+        print("[DATABASE] MongoDB indexes created successfully")
+    except Exception as e:
+        print(f"[DATABASE] Warning: Could not create indexes: {e}")
+        print("[DATABASE] Make sure MongoDB is running and accessible")
+    
     start_scheduler()
     yield
     stop_scheduler()
